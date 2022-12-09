@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto | Main page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container">
+        <nav class="header-menu">
+            <a class="link logo" href="#">
+                <img class="logo__img" src="images/logo.svg" alt="Crypto logo" width="134px" height="40px">
+            </a>
+
+            <button class="burger-btn burger-btn--open" type="button">
+                <span class="burger-btn__line"></span>
+                <span class="visually-hidden">Открыть меню</span>
+            </button>
+
+            <ul class="header-menu__list">
+                <li class="header-menu__item">
+                    <a class="link header-menu__link" href="#products">Products</a>
+                </li>
+                <li class="header-menu__item">
+                    <a class="link header-menu__link" href="#features">Features</a>
+                </li>
+                <li class="header-menu__item">
+                    <a class="link header-menu__link" href="#about">About</a>
+                </li>
+                <li class="header-menu__item">
+                    <a class="link header-menu__link" href="#contact">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="account-actions">
+                <li class="account-actions__item">
+                    <a class="link account-actions__link" href="#">Login</a>
+                </li>
+                <li class="account-actions__item">
+                    <a class="btn account-actions__link account-actions__link--register" href="#">Register</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <nav class="mobile-menu">
+            <div class="overlay"></div>
+            <div class="mobile-menu__inner">
+
+                <div class="mobile-menu__item">
+                    <a class="link mobile-menu__logo" href="#">
+                        <img class="logo__img" src="images/logo.svg" alt="Логотип компании SimpleFood" width="200"
+                            height="39">
+                    </a>
+
+                    <button class="burger-btn burger-btn--close" type="button">
+                        <span class="visually-hidden">Закрыть меню</span>
+                    </button>
+                </div>
+
+                <div class="mobile-menu__item">
+                    <ul class="burger-menu">
+                        <li class="burger-menu__item">
+                            <a class="link header-menu__link" href="#products">Products</a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="link header-menu__link" href="#features">Features</a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="link header-menu__link" href="#about">About</a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="link header-menu__link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="mobile-menu__item">
+                    <ul class="burger-actions">
+                        <li class="burger-actions__item">
+                            <a class="link account-actions__link mobile-menu__link" href="#">Login</a>
+                        </li>
+                        <li class="burger-actions__item">
+                            <a class="btn account-actions__link mobile-menu__link account-actions__link--register" href="#">Register</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="content">
+    <h1 class="visually-hidden">Crypto - platform to invest in crypto currency</h1>
+
+    <section class="hero">
+    <div class="container">
+        <div class="hero__wrapper" style="background-image:url('images/bitcoin-bg.png')">
+            <div class="hero__inner">
+                <div class="hero__offer">
+                    <span class="hero__offer-accent">75% save</span>
+                    <span>For the Black Friday weekend</span>
+                </div>
+                <P class="hero__title">Fastest & secure platform to invest in crypto</P>
+                <p class="hero__text">Buy and sell cryptocurrencies, trusted by 10M wallets with over $30 billion in transactions.</p>
+                <a class="btn hero__link" href="#">Try for FREE</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="stats">
+    <div class="container">
+        <div class="stats__top">
+            <h2 class="visually-hidden">Our cryptocurrency trading statistics</h2>
+            <div class="stats__block stats__block--currency">
+                <span class="stats__value">$30B</span>
+                <span>Digital Currency Exchanged</span>
+            </div>
+            <div class="stats__block stats__block--investors">
+                <span class="stats__value">10M+</span>
+                <span>Trusted Wallets Investor</span>
+            </div>
+            <div class="stats__block stats__block--countries">
+                <span class="stats__value">195</span>
+                <span>Countries Supported</span>
+            </div>
+        </div>
+        <div class="stats__bottom" id="about" style="background-image:url('images/stats-bg.png')">
+            <div class="stats__inner">
+                <P class="title">Why you should choose CRYPTO</P>
+                <p class="stats__text">Experience the next generation cryptocurrency platform. No financial borders,
+                    extra fees, and fake reviews.</p>
+                <a class="btn info-link" href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="market">
+    <div class="container">
+        <div class="market__top">
+            <h2 class="title market__top-title">Check how much you can earn</h2>
+            <p class="market__text">
+                Let’s check your hash rate to see how much you will earn today. Set the required value for the
+                calculation.
+            </p>
+            <div class="market-card">
+                <form class="market-card__form" actiom="#">
+                    <label class="market-card__label" for="value">
+                        <span class="visually-hidden"></span>
+                    </label>
+                    <input class="market-card__input" type="number" name="value" id="value"
+                        placeholder="Enter your hash rate" required>
+                    <label class="market-card__label" for="currency"></label>
+                    <select class="market-card__select" name="currency" id="currency">
+                        <option value="">TH/s</option>
+                        <option value="">TH/s</option>
+                        <option value="">TH/s</option>
+                        <option value="">TH/s</option>
+                    </select>
+                    <button class="btn market-card__button" type="submit">Calculate</button>
+                </form>
+                <div class="market-card__result">
+                    <span class="market-card__result-title">estimated 24 hour revenue:</span>
+                    <span class="market-card__result-currency market-card__result-curreency--crypto">
+                        0.055 130 59ETH
+                    </span>
+                    <span class="market-card__result-currency market-card__result-currency--fiat">
+                        ($1275)
+                    </span>
+                    <p class="market-card__result-text">
+                        Revenue will change based on mining difficulty and Ethereum price.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="market__bottom">
+        <div class="market__wrapper">
+            <div class="container">
+                <h2 class="title market__title" id="products">Trade securely and market the high growth cryptocurrencies.</h2>
+                <ul class="market__list">
+                    <li class="market__item">
+                        <article class="product-card product-card--bitcoin">
+                            <div>
+                                <h3 class="product-card__title">Bitcoin</h3>
+                                <span class="product-card__abbr">btc</span>
+                            </div>
+                            <div class="product-card__text">
+                                Digital currency in which a record of transactions is maintained.
+                            </div>
+                            <span class="link product-card__link-wrapper"></span>
+                            <a class="btn product-card__link" href="#">Start mining</a>
+                        </article>
+                    </li>
+    
+                    <li class="market__item">
+                        <article class="product-card product-card--ethereum">
+                            <div>
+                                <h3 class="product-card__title">Ethereum</h3>
+                                <span class="product-card__abbr">eth</span>
+                            </div>
+                            <div class="product-card__text">
+                                Blockchain technology to create and run decentralized digital applications.
+                            </div>
+                            <span class="link product-card__link-wrapper"></span>
+                            <a class="btn product-card__link" href="#">Start mining</a>
+                        </article>
+                    </li>
+                    <li class="market__item">
+                        <article class="product-card product-card--litecoin">
+                            <div>
+                                <h3 class="product-card__title">Litecoin</h3>
+                                <span class="product-card__abbr">ltc</span>
+                            </div>
+                            <div class="product-card__text">
+                                Cryptocurrency that enables instant payments to anyone in the world.
+                            </div>
+                            <span class="link product-card__link-wrapper"></span>
+                            <a btn class="btn product-card__link" href="#">Start mining</a>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="features" id="features">
+    <div class="container">
+        <h2 class="visually-hidden">Advantages of the crypto platform</h2>
+        <div class="title features__title">
+            Market sentiments, portfolio, and run the infrastructure of your choice
+        </div>
+        <ul class="features__list">
+            <li class="features__item features__item--left">
+                <div class="features__inner">
+                    <h3 class="features__caption">Invest Smart</h3>
+                    <p class="features__text">
+                        Get full statistic information about the behaviour of buyers and sellers will help you to make
+                        the decision.
+                    </p>
+                    <a class="btn info-link" href="#">Learn More</a>
+                </div>
+                <div class="features__content features__content--right">
+                    <div class="chart" style="background-image: url(images/chart.png)">
+                        <div class="chart__currency">
+                            <div class="chart__currency-coin">
+                                <h4 class="chart__currency-title">Bitcoin</h4>
+                                <span class="chart__currency-abbr">btc</span>
+                                <span class="chart__currency-value">0.00080 btc</span>
+                            </div>
+                            <span class="chart__currency-profit">+125%</span>
+                        </div>
+                        <div class="chart__info chart__info--trade">
+                            <span class="chart__info-caption">Increase in Trade</span>
+                            <span class="chart__info-value chart__info-value--trade">
+                                +75%
+                            </span>
+                            <span class="chart__info-description">Sell option</span>
+                        </div>
+                        <div class="chart__info chart__info--price">
+                            <span class="chart__info-value">$15.32</span>
+                            <span class="chart__info-description">Price in dollar</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="features__item features__item--right">
+                <div class="features__content features__content--left">
+                    <img class="statistic-page" src="images/statistic.png" alt="Statistic page image">
+                </div>
+                <div class="features__inner">
+                    <h3 class="features__caption">Detailed Statistics</h3>
+                    <p class="features__text">
+                        View all mining related information in realtime, at any point at any location and decide which
+                        polls you want to mine in.
+                    </p>
+                    <a class="btn info-link" href="#">Learn More</a>
+                </div>
+            </li>
+            <li class="features__item features__item--left">
+                <div class="features__inner">
+                    <h3 class="features__caption">Grow your profit and track your investments</h3>
+                    <p class="features__text">
+                        Use advanced analytical tools. Clear TradingView charts let you track current and historical
+                        profit investments.
+                    </p>
+                    <a class="btn info-link" href="#">Learn More</a>
+                </div>
+                <div class="features__content features__content--right">
+                    <div class="quotes">
+                        <div class="quotes__header">
+                            <span class="quotes__header-title">Price</span>
+                            <span class="quotes__header-title--enable">Change</span>
+                            <span class="quotes__header-title">Volume (24h)</span>
+                        </div>
+                        <ul class="quotes__list">
+                            <li class="quotes__item">
+                                <a class="quotes__link" href="#">
+                                    <div class="quotes__currency quotes__currency--bitcoin">
+                                        <span class="quotes__currency-abbr">btc</span>
+                                        <span class="quotes__currency-name">Bitcoin</span>
+                                    </div>
+                                    <span class="quotes__profit quotes__profit--money">$6750</span>
+                                    <span class="quotes__profit quotes__profit--percent positive">+7.3%</span>
+                                    <span class="quotes__profit quotes__profit--money">$3420214</span>
+                                </a>
+                            </li>
+                            <li class="quotes__item">
+                                <a class="quotes__link" href="#">
+                                    <div class="quotes__currency quotes__currency--ethereum">
+                                        <span class="quotes__currency-abbr">eth</span>
+                                        <span class="quotes__currency-name">Ethereum</span>
+                                    </div>
+                                    <span class="quotes__profit quotes__profit--money">$156.83</span>
+                                    <span class="quotes__profit quotes__profit--percent negative">-0.9%</span>
+                                    <span class="quotes__profit quotes__profit--money">$1812350</span>
+                                </a>
+                            </li>
+                            <li class="quotes__item">
+                                <a class="quotes__link" href="#">
+                                    <div class="quotes__currency quotes__currency--litecoin">
+                                        <span class="quotes__currency-abbr">ltc</span>
+                                        <span class="quotes__currency-name">Litecoin</span>
+                                    </div>
+                                    <span class="quotes__profit quotes__profit--money">$8535</span>
+                                    <span class="quotes__profit quotes__profit--percent positive">+8.2%</span>
+                                    <span class="quotes__profit quotes__profit--money">$5820399</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+    <article class="offer" id="contact">
+    <div class="container">
+        <div class="offer__wrapper">
+            <div class="offer__inner">
+                <h2 class="title offer__title">Start mining now</h2>
+                <p class="offer__text">Join now with CRAPPO to get the latest news and start mining now</p>
+            </div>
+            <form class="offer__form"  action="#">
+                <label for="email">
+                    <span class="visually-hidden">
+                        Enter your email
+                    </span>
+                </label>
+                <input class="offer__field" type="email" email="email" id="email" placeholder="Enter your email" required>
+                <button class="offer__button">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</article>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <a class="link logo footer__logo" href="#">
+                <img class="logo__img" src="images/logo.svg" alt="Crypto logo" width="134px" height="40px">
+            </a>
+            <div class="footer__menu">
+
+                <div class="footer__menu-container">
+                    <h3 class="footer__title">Quick Link</h3>
+
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a class="link footer__link" href="#">Home</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="link footer__link" href="#">Products</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="link footer__link" href="#">About</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="link footer__link" href="#">Features</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="link footer__link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__menu-container">
+                    <h3 class="footer__title">Resources</h3>
+
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a class="link footer__link" href="#">Download Whitepapper</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="link footer__link" href="#">Smart Token</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="link footer__link" href="#">Blockchain Explorer</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="link footer__link" href="#">Crypto API</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="link footer__link" href="#">Interest</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="payments">
+                <h2 class="payments__title">We accept following payment systems</h2>
+
+                <ul class="payments__list">
+                    <li class="payments__item">
+                        <button class="payments__btn">
+                            <svg width="48" height="48">
+                                <use xlink:href="images/sprite.svg#visa-logo"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="payments__item">
+                        <button class="payments__btn">
+                            <svg width="48" height="38">
+                                <use xlink:href="images/sprite.svg#mastercard-logo"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="payments__item">
+                        <button class="payments__btn">
+                            <svg width="40" height="40">
+                                <use xlink:href="images/sprite.svg#bitcoin-logo"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__rights">
+                &copy;2021 CRYPTO. All rights reserved
+            </div>
+            <ul class="social">
+                <li class="social__item">
+                    <a class="link social__link" style="-webkit-mask-image: url(images/sprite.svg#facebook);" href="#"></a>
+                </li>
+                <li class="social__item">
+                    <a class="link social__link" style="-webkit-mask-image: url(images/sprite.svg#instagram);" href="#"></a>
+                </li>
+                <li class="social__item">
+                    <a class="link social__link" style="-webkit-mask-image: url(images/sprite.svg#youtube);" href="#"></a>
+                </li>
+                <li class="social__item">
+                    <a class="link social__link" style="-webkit-mask-image: url(images/sprite.svg#twitter);" href="#"></a>
+                </li>
+                <li class="social__item">
+                    <a class="link social__link" style="-webkit-mask-image: url(images/sprite.svg#linkedin);" href="#"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

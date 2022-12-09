@@ -1,0 +1,180 @@
+.stats {
+    position: relative;
+    padding: 100px 0;
+
+    @include mq('tablet') {
+        padding: 30px 0;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+
+        @include mq('tablet') {
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__block {
+        position: relative;
+        max-width: 335px;
+        padding-left: 104px;
+        line-height: 1.5;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        @include mq('tablet-2') {
+            padding-left: 84px;
+        }
+
+        @include mq('tablet') {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        @include mq('tablet') {
+            font-size: 14px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: rgba($white, 0.1);
+            border-radius: 50%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include mq('tablet-2') {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background-color: $accent;
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include mq('tablet-2') {
+                width: 28px;
+                height: 28px;
+                left: 16px;
+            }
+        }
+
+        &--currency {
+            &::after {
+                mask-image: url('../images/sprite.svg#statistics-icon');
+            }
+        }
+
+        &--investors {
+            &::after {
+                mask-image: url('../images/sprite.svg#person-icon');
+            }
+        }
+
+        &--countries {
+            &::after {
+                mask-image: url('../images/sprite.svg#earth-icon');
+            }
+        }
+    }
+
+    &__value {
+        display: block;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.5;
+
+        @include mq('tablet-2') {
+            font-size: 32px;
+        }
+
+        @include mq('tablet') {
+            font-size: 24px;
+        }
+
+        @include mq('phone') {
+            font-weight: 500;
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-position: left;
+        @extend %bg-properties;
+        padding: 75px 0;
+
+        @include mq('tablet-2') {
+            box-shadow: inset 0 0 0 1500px rgba($primary, 0.7);
+            padding: 20px 0;
+        }
+
+        @include mq('tablet') {
+            align-items: flex-start;
+            background-position: right;
+        }
+
+        &::before,
+        &::after {
+            @include mq('tablet-2') {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -2%;
+            transform: rotate(60deg);
+            top: -45%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 34.75%, rgba(255, 255, 255, 0.1) 100%);
+            @extend %bg-properties;
+            width: 120px;
+            height: 1000px;
+            pointer-events: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -0;
+            top: -60%;
+            background-image: url('../images/stats-bg-right.svg');
+            @extend %bg-properties;
+            width: 250px;
+            height: 945px;
+            pointer-events: none;
+        }
+    }
+
+    &__inner {
+        max-width: 480px;
+
+        @include mq('phone') {
+            max-width: 340px;
+        }
+    }
+
+    &__text {
+        line-height: 1.5;
+        margin-bottom: 32px;
+    }
+}

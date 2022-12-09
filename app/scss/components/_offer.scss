@@ -1,0 +1,187 @@
+.offer {
+    position: relative;
+    padding: 90px 0;
+    background: linear-gradient(180deg, #2B076E 0%, #0D0D2B 100%);
+    overflow: hidden;
+
+    @include mq('tablet-2') {
+        padding: 50px 0;
+    }
+
+    @include mq('phone') {
+        padding: 30px 0;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        @extend %bg-properties;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40.77%, rgba(255, 255, 255, 0.3) 186.22%);
+        width: 200px;
+        height: 400px;
+        transform: rotate(-45deg);
+        pointer-events: none;
+
+        @include mq('tablet-2') {
+            display: none;
+        }
+    }
+
+    &::before {
+        left: 30%;
+        top: 50%;
+    }
+
+    &::after {
+        left: 47%;
+        top: 40%;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: contain;
+        align-items: center;
+        width: 100%;
+        border-radius: 16px;
+        background-color: $accent;
+        padding: 50px;
+
+        @include mq('tablet-2') {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include mq('tablet') {
+            padding: 30px;
+        }
+
+        @include mq('phone') {
+            padding: 20px;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            @extend %bg-properties;
+            pointer-events: none;
+        }
+
+        &::before {
+            background-image: url('../images/offer-wrapper-left.svg');
+            width: 160px;
+            height: 280px;
+            left: 15px;
+
+            @include mq('tablet-2') {
+                top: 0;
+            }
+
+            @include mq('phone') {
+                display: none;
+            }
+        }
+
+        &::after {
+            background-image: url('../images/offer-wrapper-right.svg');
+            width: 140px;
+            height: 185px;
+            right: 15px;
+            top: 35%;
+        }
+    }
+
+    &__inner {
+        max-width: 350px;
+        margin-right: 30px;
+    }
+
+    &__title {
+        font-size: 32px;
+        margin-bottom: 15px;
+
+        @include mq('tablet') {
+            font-size: 26px;
+            line-height: 1.2;
+        }
+    }
+
+    &__text {
+        @include mq('tablet-2') {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__form {
+        display: flex;
+
+        @include mq('tablet') {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__field {
+        font-family: 'Rubik';
+        width: 375px;
+        color: $white;
+        background-color: transparent;
+        border-bottom: 1px solid rgba($white, 0.4);
+        padding: 8px 10px 8px 0;
+        margin-right: 40px;
+
+        @include mq('desktop') {
+            width: 350px;
+        }
+
+        @include mq('tablet') {
+            margin-bottom: 20px;
+        }
+
+        @include mq('phone') {
+            width: 260px;
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            color: $white;
+            transition: color .3s;
+        }
+
+        &:focus {
+            border-radius: 5px;
+            outline: 2px solid $white;
+        } 
+
+        &:hover::placeholder {
+            color: rgba($white , 0.5);
+        }
+    }
+
+    &__button {
+        color: $primary;
+        font-weight: 500;
+        background-color: $white;
+        border-radius: 32px;
+        padding: 14px 32px;
+        cursor: pointer;
+        transition: background-color .3s;
+
+        &:focus {
+            outline: 2px solid $white;
+        }
+
+        &:hover {
+            background-color: $gray;
+        }
+
+        &:active {
+            background-color: $light-gray;
+        }
+    }
+}

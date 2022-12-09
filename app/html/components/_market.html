@@ -1,0 +1,89 @@
+<section class="market">
+    <div class="container">
+        <div class="market__top">
+            <h2 class="title market__top-title">Check how much you can earn</h2>
+            <p class="market__text">
+                Let’s check your hash rate to see how much you will earn today. Set the required value for the
+                calculation.
+            </p>
+            <div class="market-card">
+                <form class="market-card__form" actiom="#">
+                    <label class="market-card__label" for="value">
+                        <span class="visually-hidden"></span>
+                    </label>
+                    <input class="market-card__input" type="number" name="value" id="value"
+                        placeholder="Enter your hash rate" required>
+                    <label class="market-card__label" for="currency"></label>
+                    <select class="market-card__select" name="currency" id="currency">
+                        <option value="">TH/s</option>
+                        <option value="">TH/s</option>
+                        <option value="">TH/s</option>
+                        <option value="">TH/s</option>
+                    </select>
+                    <button class="btn market-card__button" type="submit">Calculate</button>
+                </form>
+                <div class="market-card__result">
+                    <span class="market-card__result-title">estimated 24 hour revenue:</span>
+                    <span class="market-card__result-currency market-card__result-curreency--crypto">
+                        0.055 130 59ETH
+                    </span>
+                    <span class="market-card__result-currency market-card__result-currency--fiat">
+                        ($1275)
+                    </span>
+                    <p class="market-card__result-text">
+                        Revenue will change based on mining difficulty and Ethereum price.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="market__bottom">
+        <div class="market__wrapper">
+            <div class="container">
+                <h2 class="title market__title" id="products">Trade securely and market the high growth cryptocurrencies.</h2>
+                <ul class="market__list">
+                    <li class="market__item">
+                        <article class="product-card product-card--bitcoin">
+                            <div>
+                                <h3 class="product-card__title">Bitcoin</h3>
+                                <span class="product-card__abbr">btc</span>
+                            </div>
+                            <div class="product-card__text">
+                                Digital currency in which a record of transactions is maintained.
+                            </div>
+                            <span class="link product-card__link-wrapper"></span>
+                            <a class="btn product-card__link" href="#">Start mining</a>
+                        </article>
+                    </li>
+    
+                    <li class="market__item">
+                        <article class="product-card product-card--ethereum">
+                            <div>
+                                <h3 class="product-card__title">Ethereum</h3>
+                                <span class="product-card__abbr">eth</span>
+                            </div>
+                            <div class="product-card__text">
+                                Blockchain technology to create and run decentralized digital applications.
+                            </div>
+                            <span class="link product-card__link-wrapper"></span>
+                            <a class="btn product-card__link" href="#">Start mining</a>
+                        </article>
+                    </li>
+                    <li class="market__item">
+                        <article class="product-card product-card--litecoin">
+                            <div>
+                                <h3 class="product-card__title">Litecoin</h3>
+                                <span class="product-card__abbr">ltc</span>
+                            </div>
+                            <div class="product-card__text">
+                                Cryptocurrency that enables instant payments to anyone in the world.
+                            </div>
+                            <span class="link product-card__link-wrapper"></span>
+                            <a btn class="btn product-card__link" href="#">Start mining</a>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

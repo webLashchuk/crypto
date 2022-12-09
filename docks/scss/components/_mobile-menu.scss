@@ -1,0 +1,93 @@
+.mobile-menu {
+    display: none;
+    transition: background-color .5s;
+    font-size: 16px;
+
+    &__logo {
+        width: 145px;
+    }
+
+    &__inner {
+        @include mq('desktop') {
+            position: fixed;
+            display: block;
+            width: 80%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $primary;
+            transform: translateX(-200%);
+            overflow: auto;
+            z-index: 7;
+            transition: transform .7s;
+
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+        }
+
+        &.mobile-menu__inner--active {
+            transform: translateX(0);
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        background-color: $primary;
+        width: 100%;
+        justify-content: space-between;
+        z-index: 10;
+        padding: 15px 5px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $white;
+        }
+    }
+
+    @include mq('desktop') {
+        display: block;
+    }
+
+    &__link {
+        display: block;
+        padding: 10px;
+
+        @include mq('desktop') {
+            background-color: transparent;
+            text-shadow: 0px 0px 10px $accent;
+            display: block;
+        }
+    }
+}
+
+.burger-menu {
+    display: block;
+
+    &__item {
+        padding: 10px;
+    }
+}
+
+.burger-btn {
+    &--close {
+        width: 25px;
+        height: 25px;
+
+        &::before {
+            top: 0;
+            transform: rotate(45deg);
+            top: 50%;
+        }
+
+        &::after {
+            top: calc(100% - 2px);
+            transform: rotate(-45deg);
+            top: 50%;
+        }
+
+        @include mq('desktop') {
+            display: block;
+        }
+    }
+}

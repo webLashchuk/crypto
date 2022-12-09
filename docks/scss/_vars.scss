@@ -1,0 +1,92 @@
+$primary: #0d0d2b;
+$accent: #3671e9;
+$dark-gray: #565656;
+$gray: #f2f2f2;
+$black: #000;
+$light-gray: #e0e0e0;
+$white: #fff;
+$neutral-gray: #bdbdbd;
+$light-purple: #391777;
+$light-bg: #F8F9FB;
+$purple: #2B076E;
+$secondary-gray: #828282;
+$purple-blue: #35068c;
+$green: #8FFFBE;
+$chart-sellBg: #491f98;
+$arrow-color: #fd8589;
+$quotes-hover: #4610ad;
+
+$breakpoints: (
+    "phone-1": 375px,
+    "phone": 560px,
+    "tablet": 768px,
+    "tablet-2": 992px,
+    "desktop": 1230px
+);
+
+@mixin mq($width, $type: max) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+
+        @if $type ==max {
+            $width: $width - 1px;
+        }
+
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+%bg-properties {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+%btn-link {
+    position: relative;
+    padding: 18px 72px 18px 24px;
+
+    @include mq('tablet-2') {
+        padding: 16px 62px 16px 20px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background-color: $white;
+        border-radius: 50%;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background-color .3s;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        mask-image: url("../images/sprite.svg#angle");
+        background-color: $accent;
+        mask-repeat: no-repeat;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 26px;
+        transition: background-color .3s;
+    }
+
+    &:hover::before {
+        background-color: $accent;
+    }
+
+    &:active::before {
+        background-color: rgba($accent, 0.5);
+    }
+
+    &:hover::after {
+        background-color: $white;
+    }
+}

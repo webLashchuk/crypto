@@ -1,0 +1,580 @@
+.features {
+    position: relative;
+    background-color: $purple;
+    padding: 100px 0;
+
+    @include mq('tablet') {
+        padding: 50px 0;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        @extend %bg-properties;
+
+        @include mq('tablet-2') {
+            display: none;
+        }
+    }
+
+    &::before {
+        left: 10%;
+        top: 0;
+        background-image: url('../images/features-bg-top.png');
+        width: 685px;
+        height: 100%;
+    }
+
+    &::after {
+        right: 0;
+        bottom: 0;
+        background-image: url('../images/features-bg-bottom.png');
+        width: 320px;
+        height: 340px;
+    }
+
+    &__title {
+        max-width: 750px;
+        text-align: center;
+        margin: 0 auto 100px;
+
+        @include mq('tablet-2') {
+            max-width: 650px;
+            margin: 0 auto 50px;
+        }
+    }
+
+    &__list {
+        padding: 0 20px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+
+        &:not(:last-child) {
+            margin-bottom: 120px;
+
+            @include mq('tablet-2') {
+                margin-bottom: 60px;
+            }
+
+            @include mq('phone') {
+                margin-bottom: 30px;
+            }
+        }
+
+        @include mq('tablet-2') {
+            flex-direction: column;
+            align-items: center;
+
+            &--right {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    &__inner {
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        @include mq('tablet-2') {
+            text-align: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__caption {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 24px;
+
+        @include mq('tablet-2') {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        @include mq('tablet-2') {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        @include mq('tablet-2') {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 35px;
+        letter-spacing: 0.01em;
+        max-width: 400px;
+
+        @include mq('tablet-2') {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__content {
+        max-width: 610px;
+        z-index: 1;
+
+        &--left {
+            margin-right: 30px;
+
+            @include mq('tablet-2') {
+                margin-right: 0;
+            }
+        }
+
+        &--right {
+            margin-left: 30px;
+
+            @include mq('tablet-2') {
+                margin-left: 0;
+            }
+        }
+
+        @include mq('tablet') {
+            max-width: 480px;
+        }
+
+        @include mq('phone') {
+            max-width: 300px;
+        }
+    }
+}
+
+.chart {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    width: 580px;
+    height: 300px;
+    @extend %bg-properties;
+    background-color: $purple-blue;
+    background-position: 40px 110px;
+    background-size: 500px 135px;
+    border-radius: 16px;
+    padding: 40px 40px 50px;
+    margin-bottom: 120px;
+
+    @include mq('tablet') {
+        width: 480px;
+        height: 250px;
+        padding: 20px 20px 30px;
+        background-size: 400px 100px;
+    }
+
+    @include mq('phone') {
+        max-width: 300px;
+        height: 150px;
+        padding: 15px 15px 20px;
+        background-position: 10px 55px;
+        background-size: 280px 110px;
+    }
+
+    &__currency {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 55px;
+
+        @include mq('tablet') {
+            padding-left: 40px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('../../images/sprite.svg#logo-bitcoin');
+            width: 40px;
+            height: 40px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include mq('tablet') {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    &__currency-title {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 5px;
+
+        @include mq('tablet') {
+            font-size: 16px;
+        }
+    }
+
+    &__currency-abbr {
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 600px;
+        color: $neutral-gray;
+        vertical-align: top;
+
+        @include mq('tablet') {
+            font-size: 14px;
+        }
+    }
+
+    &__currency-value {
+        display: block;
+        color: $gray;
+        text-transform: uppercase;
+
+        @include mq('tablet') {
+            font-size: 14px;
+        }
+    }
+
+    &__currency-profit {
+        font-size: 14px;
+        color: $green;
+    }
+
+    &__info {
+        position: absolute;
+        display: block;
+        max-width: 180px;
+        width: 100%;
+        line-height: 1.4;
+        background-color: $chart-sellBg;
+        border-radius: 16px;
+        box-shadow: 0px 10px 40px $light-purple;
+
+        @include mq('tablet') {
+            max-width: 140px;
+            font-size: 14px;
+        }
+
+        @include mq('phone') {
+            max-width: 120px;
+            font-size: 14px;
+        }
+
+        &--trade {
+            left: 65px;
+            bottom: -130px;
+            padding: 24px 16px;
+
+            @include mq('tablet') {
+                bottom: -100px;
+                padding: 16px 10px;
+            }
+
+            @include mq('phone') {
+                bottom: -90px;
+                left: 20px;
+                padding: 10px;
+            }
+        }
+
+        &--price {
+            right: 55px;
+            bottom: -40px;
+            text-align: center;
+            padding: 16px 32px;
+
+            @include mq('tablet') {
+                padding: 10px 22px;
+            }
+
+            @include mq('phone') {
+                right: 20px;
+                padding: 5px;
+            }
+        }
+    }
+
+    &__info-caption {
+        display: block;
+        font-size: 20px;
+        font-weight: 600px;
+        margin-bottom: 15px;
+
+        @include mq('tablet') {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        @include mq('tablet') {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__info-value {
+        display: inline-block;
+        position: relative;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+
+        @include mq('tablet') {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        @include mq('tablet') {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        &--trade {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 15px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 12px;
+                height: 13px;
+                mask-image: url('../images/sprite.svg#arrow-up');
+                background-color: $arrow-color;
+            }
+        }
+    }
+
+    &__info-description {
+        display: block;
+        color: $gray;
+    }
+}
+
+.quotes {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    width: 610px;
+    @extend %bg-properties;
+    background-color: $purple-blue;
+    background-position: 40px 110px;
+    background-size: 500px 135px;
+    border-radius: 16px;
+    padding: 25px 0 25px;
+
+    @include mq('tablet') {
+        width: 480px;
+        font-size: 14px;
+        padding: 15px 0 15px;
+    }
+
+    @include mq('phone') {
+        width: 300px;
+        padding: 5px 0 5px;
+    }
+
+    &__header {
+        width: 350px;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        margin-left: auto;
+        padding: 15px 0;
+        margin-right: 35px;
+
+        @include mq('tablet') {
+            max-width: 285px;
+            margin-right: 25px;
+        }
+
+        @include mq('phone') {
+            max-width: 100px;
+            padding: 10px 0;
+            justify-content: center;
+        }
+    }
+
+    &__header-title {
+        @include mq('phone') {
+            display: none;
+
+            &--enable {
+                display: block;
+            }
+        }
+
+    }
+
+    &__item {
+        border-radius: 16px;
+        transition: background-color .3s, transform .3s;
+
+        &:hover {
+            background-color: $quotes-hover;
+            transform: translateX(-72px);
+        }
+
+        &:active {
+            background-color: $accent;
+        }
+    }
+
+    &__link {
+        display: grid;
+        grid-template-columns: 185px 120px 140px 1fr;
+        text-align: left;
+        padding: 16px 52px 16px 40px;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mq('tablet') {
+            grid-template-columns: 150px 90px 110px 1fr;
+            padding: 15px 10px 15px 15px;
+        }
+
+        @include mq('phone') {
+            grid-template-columns: 1fr 1fr;
+            justify-content: right;
+            padding: 10px 10px 10px 15px;
+        }
+    }
+
+    &__currency {
+        width: 150px;
+        position: relative;
+        padding-left: 56px;
+        margin-right: 32px;
+
+        @include mq('tablet') {
+            padding-left: 40px;
+            margin-right: 20px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            @extend %bg-properties;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include mq('tablet') {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &--bitcoin {
+            &::before {
+                background-image: url('../images/sprite.svg#logo-bitcoin');
+            }
+        }
+
+        &--ethereum {
+            &::before {
+                background-image: url('../images/sprite.svg#logo-ethereum');
+            }
+        }
+
+        &--litecoin {
+            &::before {
+                background-image: url('../images/sprite.svg#logo-litecoin');
+            }
+        }
+    }
+
+    &__currency-abbr {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+
+        @include mq('tablet') {
+            font-size: 16px;
+        }
+    }
+
+    &__currency-name {
+        display: block;
+        color: $gray;
+    }
+
+    &__profit {
+        &--percent {
+            position: relative;
+            padding-left: 24px;
+
+            @include mq('tablet') {
+                padding-left: 20px;
+            }
+        }
+
+        &--money {
+            @include mq('phone') {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: "";
+            left: 0;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0.3em;
+            top: 50%;
+            transform: translateY(-50%);
+            mask-image: url('../../images/sprite.svg#triangle');
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+}
+
+.positive {
+    color: $green;
+
+    &::before {
+        background-color: rgba($green, 0.1);
+    }
+
+    &::after {
+        background-color: $green;
+    }
+}
+
+.negative {
+    color: $arrow-color;
+
+    &::before {
+        background-color: rgba($arrow-color, 0.1);
+    }
+
+    &::after {
+        background-color: $arrow-color;
+        transform: rotate(180deg);
+        top: 0.3em;
+    }
+}
