@@ -384,19 +384,19 @@
 
     &--bitcoin {
         &::before {
-            background-image: url('../../images/logo-bitcoin.svg');
+            background-image: url('../images/sprite.svg#logo-bitcoin');
         }
     }
 
     &--ethereum {
         &::before {
-            background-image: url('../../images/logo-ethereum.svg');
+            background-image: url('../images/sprite.svg#logo-ethereum');
         }
     }
 
     &--litecoin {
         &::before {
-            background-image: url('../../images/logo-litecoin.svg');
+            background-image: url('../images/sprite.svg#logo-litecoin');
         }
     }
 
